@@ -77,13 +77,17 @@ body{
   opacity:.55;
   border-radius:999px;
   transform: rotate(18deg);
+  pointer-events: none; 
 }
+
 
 .bigHeart{
   font-size:58px;
   margin: 4px 0 12px;
   filter: drop-shadow(0 10px 20px rgba(255,45,85,.18));
   animation: pulse 1.5s ease-in-out infinite;
+  pointer-events: none; 
+
 }
 @keyframes pulse{
   0%,100%{ transform: scale(1); }
@@ -108,6 +112,7 @@ p{
   background: linear-gradient(180deg, rgba(255,122,162,.12), rgba(255,45,85,.06));
   border: 1px dashed rgba(255,45,85,.25);
   overflow:hidden;
+  z-index: 5; 
 }
 
 button{
