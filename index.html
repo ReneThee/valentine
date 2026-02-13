@@ -138,6 +138,8 @@ button{
 }
 #yesBtn:hover{ transform: translateY(-2px) scale(1.02); }
 #yesBtn:active{ transform: translateY(0) scale(.99); }
+#yesBtn, #noBtn { z-index: 10; }
+
 
 #noBtn{
   position:absolute;
@@ -289,7 +291,6 @@ button{
     <p><b>Wesley</b> is officially the happiest man alive 😭❤️</p>
     <div class="badge">Favour + Wesley = Valentine secured ✨</div>
     <br/>
-    <button class="close" id="closeBtn" type="button">Awww okay 💕</button>
   </div>
 </div>
 
@@ -313,7 +314,7 @@ for (let i = 0; i < 22; i++){
 /* Replace this with your endpoint:
    e.g. https://formspree.io/f/abcdwxyz
 */
-const FORMSPREE_URL = https://formspree.io/f/xwvnlnbz;
+const FORMSPREE_URL = "https://formspree.io/f/xwvnlnbz";
 
 async function sendYesNotification() {
   const form = document.getElementById("yesForm");
@@ -370,7 +371,7 @@ function moveNo(){
   yesBtn.classList.add("wiggle");
 
   // playful label changes
-  const labels = ["No","nope","hmm…","u sure?","pls 😳","stop it","okay fine"];
+  const labels = ["No","nope","hmm…","u sure?","pls","stop it","okay fine"];
   noBtn.textContent = labels[Math.min(count, labels.length-1)];
 }
 
